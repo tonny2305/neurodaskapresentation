@@ -156,7 +156,7 @@ const HeroSection: React.FC = () => {
               <div className="flex flex-col items-center">
                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 border-2 border-primary/30 shadow-md">
                   <img 
-                    src="/logos/tonny.jpg" 
+                    src="/logos/tonny22.jpeg" 
                     alt="Tonny Wahyu Aji" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
