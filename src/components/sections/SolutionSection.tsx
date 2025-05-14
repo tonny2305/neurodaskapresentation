@@ -39,7 +39,7 @@ const SolutionSection: React.FC = () => {
   };
 
   return (
-    <div className="container-section bg-gradient-to-b from-slate-900 to-indigo-950 py-20">
+    <div className="container-section bg-gradient-to-b from-background to-primary/10 py-20">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -49,12 +49,12 @@ const SolutionSection: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.div
-            className="inline-block mb-4 p-2 rounded-xl bg-indigo-500/10"
+            className="inline-block mb-4 p-2 rounded-xl bg-primary/10"
             whileInView={{ scale: [0.9, 1.1, 1] }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Brain className="w-10 h-10 text-indigo-400" />
+            <Brain className="w-10 h-10 text-primary" />
           </motion.div>
           
           <h2 className="heading-lg mb-4">
@@ -67,7 +67,7 @@ const SolutionSection: React.FC = () => {
           
           <AnimatedText
             text="NEURODASKA mengubah cara belajar jadi lebih manusiawi, inklusif, dan cerdas. Platform ini membaca gaya belajar unik setiap anak, lalu menyesuaikan kontennya secara otomatis."
-            className="text-lg text-slate-300 max-w-3xl mx-auto"
+            className="text-lg text-foreground-secondary max-w-3xl mx-auto"
             type="sentence"
           />
 
@@ -112,11 +112,11 @@ const SolutionSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-2xl blur-xl">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl">
           </div>
-          <div className="relative bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 text-center">
+          <div className="relative card rounded-2xl p-8 text-center">
             <h3 className="heading-md mb-4">Teknologi di Balik NEURODASKA</h3>
-            <p className="text-slate-300 mb-6">
+            <p className="text-foreground-secondary mb-6">
               Perpaduan antara AI generatif, sistem adaptif, dan desain inklusif yang dioptimalkan untuk berbagai gaya belajar.
             </p>
             <motion.img

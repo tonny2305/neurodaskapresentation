@@ -43,7 +43,7 @@ const ImpactSection: React.FC = () => {
   };
 
   return (
-    <div className="container-section bg-gradient-to-b from-indigo-950 to-slate-900 py-20">
+    <div className="container-section bg-gradient-to-b from-primary/10 to-background py-20">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -70,7 +70,7 @@ const ImpactSection: React.FC = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 shadow-lg"
+              className="card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -78,18 +78,18 @@ const ImpactSection: React.FC = () => {
               whileHover={{ 
                 y: -5, 
                 boxShadow: '0 15px 30px rgba(0, 0, 0, 0.2)',
-                borderColor: 'rgba(255, 255, 255, 0.2)'
+                borderColor: 'rgba(var(--color-primary), 0.2)'
               }}
             >
               <div className="flex items-start">
-                <div className="mr-4 p-3 bg-slate-700/50 rounded-lg">
+                <div className="mr-4 p-3 bg-background-secondary rounded-lg">
                   {stat.icon}
                 </div>
                 <div>
                   <div className="flex items-baseline mb-2">
                     {stat.startValue ? (
                       <div className="flex items-baseline space-x-2">
-                        <span className="text-2xl font-light line-through text-slate-400">
+                        <span className="text-2xl font-light line-through text-foreground-secondary">
                           {stat.startValue}{stat.suffix}
                         </span>
                         <span className="text-4xl font-bold text-green-400">
@@ -112,7 +112,7 @@ const ImpactSection: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  <p className="text-slate-300">{stat.label}</p>
+                  <p className="text-foreground-secondary">{stat.label}</p>
                 </div>
               </div>
             </motion.div>
@@ -126,7 +126,7 @@ const ImpactSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.5 }}
         >
-          <blockquote className="text-2xl italic text-slate-300 mb-10">
+          <blockquote className="text-2xl italic text-foreground-secondary mb-10">
             "Angka-angka ini bukan sekadar statistik. Ini adalah perbedaan nyata antara pendidikan yang mengabaikan dan pendidikan yang merangkul semua pelajar."
           </blockquote>
           

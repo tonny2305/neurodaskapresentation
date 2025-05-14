@@ -5,14 +5,15 @@ import AnimatedText from '../ui/AnimatedText';
 
 const ProblemSection: React.FC = () => {
   return (
-    <div className="container-section relative bg-slate-900 py-20">
+    <div className="container-section relative bg-background py-20">
       {/* Glitch effect background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <motion.div
-            className="absolute inset-0 bg-grid-white/[0.1] bg-[length:50px_50px]"
+            className="absolute inset-0"
             style={{
-              backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px)"
+              backgroundImage: "radial-gradient(circle, rgba(var(--color-foreground), 0.1) 1px, transparent 1px)",
+              backgroundSize: "50px 50px"
             }}
             animate={{ 
               x: [0, -10, 5, -5, 0],
@@ -53,21 +54,21 @@ const ProblemSection: React.FC = () => {
         <div className="space-y-8 text-center">
           <AnimatedText 
             text="Transformasi digital pendidikan terlalu fokus pada teknologi, tapi lupa pada keragaman cara berpikir."
-            className="text-xl leading-relaxed text-slate-300"
+            className="text-xl leading-relaxed text-foreground-secondary"
             type="sentence"
             delay={0.2}
           />
           
           <AnimatedText 
             text="Sistem e-learning saat ini terlalu seragam: teks panjang, video pasif, kuis standar."
-            className="text-xl leading-relaxed text-slate-300"
+            className="text-xl leading-relaxed text-foreground-secondary"
             type="sentence"
             delay={0.4}
           />
           
           <AnimatedText 
             text="Apa dampaknya?"
-            className="text-2xl font-medium text-white"
+            className="text-2xl font-medium text-foreground"
             type="sentence"
             delay={0.6}
           />
@@ -79,7 +80,7 @@ const ProblemSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            <p className="text-xl italic text-white">
+            <p className="text-xl italic text-foreground">
               Siswa dengan autisme, ADHD, disleksia... merasa gagal, terasing, tertinggal.
             </p>
           </motion.blockquote>

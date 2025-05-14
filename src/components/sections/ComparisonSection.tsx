@@ -24,7 +24,7 @@ const ComparisonSection: React.FC = () => {
   ];
 
   return (
-    <div className="container-section bg-slate-900 py-20">
+    <div className="container-section bg-background py-20">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -65,7 +65,7 @@ const ComparisonSection: React.FC = () => {
                   <XCircle className="text-red-500 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium mb-1">Sistem Lama</h4>
-                    <p className="text-slate-300">{item.old}</p>
+                    <p className="text-foreground-secondary">{item.old}</p>
                   </div>
                 </div>
               </motion.div>
@@ -78,7 +78,7 @@ const ComparisonSection: React.FC = () => {
                   <CheckCircle2 className="text-green-500 mr-3 flex-shrink-0" />
                   <div>
                     <h4 className="font-medium mb-1">NEURODASKA</h4>
-                    <p className="text-slate-300">{item.new}</p>
+                    <p className="text-foreground-secondary">{item.new}</p>
                   </div>
                 </div>
               </motion.div>
@@ -94,14 +94,14 @@ const ComparisonSection: React.FC = () => {
           transition={{ delay: 0.6, duration: 0.5 }}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-slate-800/70 rounded-xl overflow-hidden shadow-xl">
+            <div className="card rounded-xl overflow-hidden shadow-xl">
               <div className="bg-red-900/20 p-4 text-center">
                 <h3 className="font-bold text-lg">Pendekatan Konvensional</h3>
               </div>
               <motion.img
                 src="https://images.pexels.com/photos/8423967/pexels-photo-8423967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="Conventional learning approach"
-                className="w-full h-48 object-cover border-b border-slate-700"
+                className="w-full h-48 object-cover border-b border-border"
               />
               <div className="p-4">
                 <ul className="space-y-2">
@@ -121,14 +121,14 @@ const ComparisonSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-slate-800/70 rounded-xl overflow-hidden shadow-xl">
-              <div className="bg-indigo-900/30 p-4 text-center">
+            <div className="card rounded-xl overflow-hidden shadow-xl">
+              <div className="bg-primary/30 p-4 text-center">
                 <h3 className="font-bold text-lg">Pendekatan NEURODASKA</h3>
               </div>
               <motion.img
                 src="https://images.pexels.com/photos/4778611/pexels-photo-4778611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 alt="NEURODASKA approach"
-                className="w-full h-48 object-cover border-b border-slate-700"
+                className="w-full h-48 object-cover border-b border-border"
                 whileInView={{
                   scale: [1, 1.02, 1],
                 }}

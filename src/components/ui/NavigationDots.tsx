@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../../context/ThemeContext';
 
 interface NavigationDotsProps {
   sections: string[];
@@ -7,6 +8,7 @@ interface NavigationDotsProps {
 }
 
 const NavigationDots: React.FC<NavigationDotsProps> = ({ sections, activeIndex }) => {
+  const { theme } = useTheme();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -23,14 +25,14 @@ const NavigationDots: React.FC<NavigationDotsProps> = ({ sections, activeIndex }
           onClick={() => scrollToSection(section)}
           aria-label={`Scroll to ${section} section`}
         >
-          <span className="absolute right-full mr-3 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+          <span className="absolute right-full mr-3 font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-foreground">
             {section.charAt(0).toUpperCase() + section.slice(1)}
           </span>
           <motion.div
             className={`w-3 h-3 rounded-full transition-all ${
               activeIndex === index
-                ? 'bg-indigo-500 shadow-md shadow-indigo-500/50'
-                : 'bg-slate-600 hover:bg-slate-500'
+                ? 'bg-primary shadow-md shadow-primary/50'
+                : 'bg-foreground-secondary/30 hover:bg-foreground-secondary/50'
             }`}
             animate={{
               scale: activeIndex === index ? 1.2 : 1
@@ -39,7 +41,7 @@ const NavigationDots: React.FC<NavigationDotsProps> = ({ sections, activeIndex }
           />
           {activeIndex === index && (
             <motion.div
-              className="absolute inset-0 rounded-full bg-indigo-500/20"
+              className="absolute inset-0 rounded-full bg-primary/20"
               initial={{ scale: 0 }}
               animate={{ scale: 1.5 }}
               transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}

@@ -19,7 +19,7 @@ const ClosingSection: React.FC = () => {
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-1/4 left-10 w-60 h-60 rounded-full bg-indigo-600/10 blur-3xl"
+          className="absolute top-1/4 left-10 w-60 h-60 rounded-full bg-primary/10 blur-3xl"
           animate={{
             x: [0, 20, 0],
             y: [0, -20, 0],
@@ -31,7 +31,7 @@ const ClosingSection: React.FC = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-1/3 right-10 w-60 h-60 rounded-full bg-purple-500/10 blur-3xl"
+          className="absolute bottom-1/3 right-10 w-60 h-60 rounded-full bg-secondary/10 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 20, 0],
@@ -54,7 +54,7 @@ const ClosingSection: React.FC = () => {
         >
           <div className="inline-flex items-center justify-center mb-6">
             <motion.div
-              className="w-20 h-20 rounded-full bg-gradient-to-r from-indigo-600/20 to-purple-600/20 flex items-center justify-center"
+              className="w-20 h-20 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center"
               animate={{ 
                 scale: [1, 1.05, 1],
               }}
@@ -64,7 +64,7 @@ const ClosingSection: React.FC = () => {
                 ease: "easeInOut"
               }}
             >
-              <GraduationCap className="w-10 h-10 text-indigo-400" />
+              <GraduationCap className="w-10 h-10 text-primary" />
             </motion.div>
           </div>
           
@@ -109,7 +109,7 @@ const ClosingSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 backdrop-blur-sm border border-indigo-700/30 rounded-xl p-8 shadow-xl">
+          <div className="bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-sm border border-primary/30 rounded-xl p-8 shadow-xl">
             <motion.div
               className="mx-auto max-w-3xl py-6"
               whileInView={{ 

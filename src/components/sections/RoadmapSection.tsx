@@ -66,7 +66,7 @@ const RoadmapSection: React.FC = () => {
   ];
 
   return (
-    <div className="container-section bg-slate-900 py-20">
+    <div className="container-section bg-background py-20">
       <div className="max-w-5xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -92,7 +92,7 @@ const RoadmapSection: React.FC = () => {
         <div className="mb-20">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 sm:left-36 top-0 bottom-0 w-0.5 bg-indigo-600/30 z-0"></div>
+            <div className="absolute left-8 sm:left-36 top-0 bottom-0 w-0.5 bg-primary/30 z-0"></div>
             
             {/* Timeline items */}
             <div className="relative z-10 space-y-12">
@@ -114,9 +114,9 @@ const RoadmapSection: React.FC = () => {
                   
                   <div className="flex-1">
                     <div className="flex items-center">
-                      <div className="w-6 h-6 rounded-full bg-indigo-600 border-4 border-slate-800 mr-4 sm:mr-8 flex-shrink-0"></div>
-                      <div className="bg-slate-800/70 p-4 rounded-lg border border-slate-700 flex-1">
-                        <p className="font-medium text-white">{item.title}</p>
+                      <div className="w-6 h-6 rounded-full bg-primary border-4 border-background mr-4 sm:mr-8 flex-shrink-0"></div>
+                      <div className="card flex-1">
+                        <p className="font-medium text-foreground">{item.title}</p>
                       </div>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ const RoadmapSection: React.FC = () => {
             {abcgmItems.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center"
+                className="card text-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -151,7 +151,7 @@ const RoadmapSection: React.FC = () => {
               >
                 <div className="flex justify-center mb-4">
                   <motion.div
-                    className="w-16 h-16 rounded-full bg-slate-700 flex items-center justify-center"
+                    className="w-16 h-16 rounded-full bg-background-secondary flex items-center justify-center"
                     whileInView={{ 
                       scale: [1, 1.1, 1],
                       rotate: [0, 5, -5, 0]
@@ -172,7 +172,7 @@ const RoadmapSection: React.FC = () => {
                   <h4 className="text-lg font-medium">{item.title}</h4>
                 </div>
                 
-                <p className="text-sm text-slate-300">{item.description}</p>
+                <p className="text-sm text-foreground-secondary">{item.description}</p>
               </motion.div>
             ))}
           </div>
