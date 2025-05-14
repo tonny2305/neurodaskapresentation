@@ -61,8 +61,8 @@ const SolutionSection: React.FC = () => {
             Solusi: <span className="neurodaska-gradient-text">NEURODASKA</span>
           </h2>
           
-          <p className="subtitle mb-6">
-            Sistem Pembelajaran Digital Adaptif Berbasis Neurodiversity dan AI
+          <p className="subtitle mb-6 text-center">
+          Neurodiverse Adaptive Learning System for Indonesia
           </p>
           
           <AnimatedText

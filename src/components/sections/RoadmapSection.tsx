@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Map, BarChart3, GraduationCap, GlobeIcon, Building2, Users, BookOpenCheck, Newspaper } from 'lucide-react';
+import { Map, BarChart3, GraduationCap, GlobeIcon, Building2, Users, BookOpenCheck, Newspaper, ExternalLink } from 'lucide-react';
 import AnimatedText from '../ui/AnimatedText';
+import GradientButton from '../ui/GradientButton';
 
 const RoadmapSection: React.FC = () => {
   const roadmapItems = [
@@ -64,6 +65,10 @@ const RoadmapSection: React.FC = () => {
       icon: <Newspaper className="w-8 h-8 text-purple-400" />
     }
   ];
+
+  const handleExploreClick = () => {
+    window.open('https://neurodaska.vercel.app/', '_blank');
+  };
 
   return (
     <div className="container-section bg-background py-20">
@@ -176,6 +181,21 @@ const RoadmapSection: React.FC = () => {
               </motion.div>
             ))}
           </div>
+          
+          <motion.div
+            className="mt-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+          >
+            <GradientButton 
+              text="Explore Neurodaska" 
+              onClick={handleExploreClick}
+              icon={<ExternalLink className="w-4 h-4" />}
+              className="mx-auto"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </div>
