@@ -67,4 +67,4 @@ Kunjungi [https://neurodaska.vercel.app](https://neurodaska.vercel.app) untuk me
 
 ## 📄 Lisensi
 
-Proyek ini dilisensikan di bawah [MIT License](LICENSE). 
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
