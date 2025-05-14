@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Sparkles, Settings } from 'lucide-react';
+import { Brain, Sparkles, Settings, Users } from 'lucide-react';
 import AnimatedText from '../ui/AnimatedText';
 import GradientButton from '../ui/GradientButton';
 import LogoShowcase from '../ui/LogoShowcase';
@@ -143,6 +143,49 @@ const HeroSection: React.FC = () => {
               icon={<Sparkles className="w-4 h-4" />}
               showChevron
             />
+          </motion.div>
+          
+          {/* Penambahan kredit pengembang */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 0.5 }}
+            className="mt-10 flex flex-col items-center"
+          >
+            <div className="flex items-center justify-center gap-6 mt-10 mb-2">
+              <div className="flex flex-col items-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 border-2 border-primary/30 shadow-md">
+                  <img 
+                    src="/public/logos/tonny.jpg" 
+                    alt="Tonny Wahyu Aji" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://ui-avatars.com/api/?name=Tonny+Wahyu+Aji&background=random";
+                    }}
+                  />
+                </div>
+                <p className="text-base md:text-lg font-medium">Tonny Wahyu Aji</p>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden mb-3 border-2 border-primary/30 shadow-md">
+                  <img 
+                    src="/public/assets/yasir22.jpg" 
+                    alt="Ahmad Meijlan Yasir" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "https://ui-avatars.com/api/?name=Ahmad+Meijlan+Yasir&background=random";
+                    }}
+                  />
+                </div>
+                <p className="text-base md:text-lg font-medium">Ahmad Meijlan Yasir</p>
+              </div>
+            </div>
+            <p className="text-sm md:text-base text-foreground-secondary mt-1">
+              Sekolah Tinggi Meteorologi Klimatologi dan Geofisika
+            </p>
           </motion.div>
         </div>
       </div>
